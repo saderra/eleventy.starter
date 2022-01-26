@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: main
+description: "Meta description content"
 eleventyNavigation:
   key: Home
   order: 100

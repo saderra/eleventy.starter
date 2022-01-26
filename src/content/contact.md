@@ -1,6 +1,6 @@
 ---
 title: Contact
-layout: main
+mainID: contact
 permalink: /contact/
 eleventyNavigation:
   key: Contact

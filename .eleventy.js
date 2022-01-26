@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+    
+
     // Passthroughts
     eleventyConfig.addPassthroughCopy ("./src/assets");
 
