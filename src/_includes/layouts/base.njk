@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include "layouts/head/siteMeta.njk" %}
-    {% include "layouts/head/title.njk" %}
-    {% include "layouts/head/pageMeta.njk" %}
-    {% include "layouts/head/style.njk" %}
+    {% include "layouts/head.njk" %}
 </head>
 
 
-<body>
-
+<body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
+<div class="container">
     {% include "layouts/header.njk" %}
 
-        <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %}>
+        <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
              {{ content | safe }}
         </main>
 
     {% include "layouts/footer.njk" %}
-
+</div>
 </body>
 </html>

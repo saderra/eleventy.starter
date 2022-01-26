@@ -1,9 +1,11 @@
 ---
 title: Home
 description: "Meta description content"
+bodyClass: "front-page"
+mainID: "home"
 eleventyNavigation:
   key: Home
   order: 100
 ---
 
-This is the home page. 
+11TY Starter Theme
