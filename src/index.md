@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: layouts/main
+layout: main
 eleventyNavigation:
   key: Home
   order: 100
