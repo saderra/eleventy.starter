@@ -5,11 +5,24 @@
 </head>
 
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
+{% include "layouts/header.njk" %}
 <div class="container">
-    {% include "layouts/header.njk" %}
+    
 
         <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
              {{ content | safe }}
+
+
+             <div x-data="{ expanded: false }">
+        <button x-on:mouseenter="expanded = ! expanded">Toggle Content</button>
+ 
+    <p x-show="expanded" x-collapse>
+        ...
+    </p>
+</div>
+
+
+
         </main>
 
     {% include "layouts/footer.njk" %}
