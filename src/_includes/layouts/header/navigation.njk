@@ -1,9 +1,7 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
 <nav class="relative bg-gray-100 placeholder:text-white">
-
- {% set navPages = collections.all | eleventyNavigation %}
-        {%- for entry in navPages %}
-            <a href="{{ entry.url | url }}" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">{{ entry.title }}</a>
-        {%- endfor %}
-	
-
+    {%- for entry in navPages %}
+        <a href="{{ entry.url | url }}" class="">{{ entry.title }}</a>
+    {%- endfor %}
 </nav>

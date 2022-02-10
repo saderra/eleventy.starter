@@ -4,6 +4,10 @@ const htmlmin = require('html-minifier')
 
 module.exports = function (eleventyConfig) { 
 
+    /* Global Data */
+    eleventyConfig.addGlobalData("siteName", "Eleventy Starter");
+    eleventyConfig.addGlobalData("fathom", "ABC123");
+
     /* Plugins */
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 

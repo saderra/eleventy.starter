@@ -11,21 +11,9 @@
 
         <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
              {{ content | safe }}
-
-
-             <div x-data="{ expanded: false }">
-        <button x-on:mouseenter="expanded = ! expanded">Toggle Content</button>
- 
-    <p x-show="expanded" x-collapse>
-        ...
-    </p>
-</div>
-
-
-
         </main>
 
-    {% include "layouts/footer.njk" %}
+{% include "layouts/footer.njk" %}
 </div>
 </body>
 </html>
