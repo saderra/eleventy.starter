@@ -8,13 +8,6 @@ module.exports = {
   theme: {
     container: {
 			center: true,
-			screens: {
-				sm: "100%",
-				md: "100%",
-				lg: "1140px",
-				xl: "1280px",
-				"2xl": "1440px"
-			}
 		},
     fontWeight: {
 			"extra-light": 200,
@@ -24,12 +17,13 @@ module.exports = {
 			strong: 600
 		},
     fontSize: {
-			'base': '1rem'
+
 	  },
     extend: {
       height: {
-				'13': '3.1rem'
-			}
+			
+		},
+
     },
   },
   variants: {
