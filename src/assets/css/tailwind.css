@@ -5,3 +5,7 @@
 body { 
   @apply font-sans;
 }
+
+.container { 
+  @apply  px-2 sm:px-4 lg:px-6; 
+}
