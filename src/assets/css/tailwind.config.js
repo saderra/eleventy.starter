@@ -3,7 +3,10 @@ const twtype = require('@tailwindcss/typography');
 const twforms = require('@tailwindcss/forms');
 
 module.exports = {
-  content: ['./src/_includes/**/*.{html,js,njk}'],
+  content: [
+    './src/_includes/**/*.{html,js,njk}',
+    './src/content/**/*.{md,html}'
+  ],
   safelist: [],
   theme: {
     container: {
@@ -16,14 +19,7 @@ module.exports = {
 			medium: 500,
 			strong: 600
 		},
-    fontSize: {
-
-	  },
     extend: {
-      height: {
-			
-		},
-
     },
   },
   variants: {

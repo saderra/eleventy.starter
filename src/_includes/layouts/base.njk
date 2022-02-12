@@ -6,14 +6,21 @@
 
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
 {% include "layouts/header.njk" %}
-<div class="container">
-    
+
+    <div class="container">
+
+        <section class="left">
+            {% block left %}{% endblock %}
+        </section>
+
 
         <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
-             {{ content | safe }}
+            {{ content | safe }}
         </main>
+        
+    </div>
+
 
 {% include "layouts/footer.njk" %}
-</div>
 </body>
 </html>

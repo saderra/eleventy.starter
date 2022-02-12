@@ -1,6 +1,7 @@
 ---
 title: Contact
 mainID: contact
+layout: page
 permalink: /contact/
 bodyClass: "contact-page"
 eleventyNavigation:
