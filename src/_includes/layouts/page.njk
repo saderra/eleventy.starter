@@ -1,5 +1,10 @@
-{% include "layouts/base.njk" %}
+{% extends "layouts/base.njk" %}
 
-{% block left %}
-This is the left side!
+{% block main %}
+    {{ content | safe }}
 {% endblock %}
+
+
+{% block sidebar %}
+    The Sidebar
+{% endblock %}  

@@ -1,1 +1,1 @@
-module.exports = "base.njk";
+module.exports = "page.njk";

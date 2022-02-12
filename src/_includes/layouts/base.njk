@@ -7,18 +7,20 @@
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
 {% include "layouts/header.njk" %}
 
-    <div class="container">
-
-        <section class="left">
-            {% block left %}{% endblock %}
-        </section>
+{% if hasMast %}
+    {% include "components/pageMast.njk" %}
+{% endif %}
 
 
-        <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
-            {{ content | safe }}
-        </main>
-        
-    </div>
+<main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container">
+   {% block main  %}
+   {% endblock %}
+</main>
+
+
+{% if hasSidebar %}
+    {% block sidebar %}{% endblock %}
+{% endif %}
 
 
 {% include "layouts/footer.njk" %}
