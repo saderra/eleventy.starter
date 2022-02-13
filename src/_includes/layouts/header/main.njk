@@ -1,0 +1,18 @@
+<nav x-data="{ open: false }" class="fixed sticky top-0 bg-white shadow-md" role="navigation" aria-label="Main Menu">
+  <div class="container py-6 md:py-8">
+    <div class="flex items-center justify-between">
+
+      <div class="flex-shrink-0">
+        <a href="/">
+          {% include "layouts/header/logo.njk" %}
+        </a>
+      </div>
+      
+      {% include "layouts/header/mainLinks.njk" %}
+      {% include "layouts/header/mobileButton.njk" %}
+
+    </div>
+    {% include "layouts/header/mobileMenu.njk" %}
+  </div>
+  
+</nav>

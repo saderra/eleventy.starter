@@ -7,5 +7,36 @@ body {
 }
 
 .container { 
-  @apply  px-2 sm:px-4 lg:px-6; 
+  @apply  px-6 lg:px-8; 
+}
+
+.inter { 
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+/****** MAIN NAVIGATION ***/
+ul.main-navigation {
+  @apply inter font-medium uppercase;
+}
+
+ul.main-navigation {
+  @apply inter;
+}
+
+ul.main-navigation > li {
+  @apply inline-block float-left;
+}
+
+ul.main-navigation > li > a {
+  @apply block p-3 ml-3;
+}
+
+ul.main-navigation > li > ul {
+  @apply w-64 border-t;
+}
+
+ul.main-navigation > li > ul a {
+  @apply block pl-5 py-3 border-b;
 }

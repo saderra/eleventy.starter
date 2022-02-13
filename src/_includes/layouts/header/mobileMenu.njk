@@ -1,0 +1,20 @@
+<!-- Mobile Link Styles -->
+{% set shared = "block py-4 pl-6 font-medium text-lg text-left border-b border-white/20 mb-0" %}
+{% set level0 = "text-white" %}
+{% set level0active = "text-cfpurple-bright" %}   
+   
+  <div 
+    x-description="Mobile menu, show/hide based on menu state."
+    class="border-t sm:hidden bg-coblue "
+    id="mobile-menu"
+    x-show="open"
+    style="display: none;">
+
+    {% set navPages = collections.all | eleventyNavigation %}
+
+    {%- for entry in navPages %}
+      <a href="{{ entry.url | url }}" class="{{ shared }} {{ level0 }}">{{ entry.title }} <span class="text-orange-400 inline-block pl-1">&rarr;</span></a>
+    {%- endfor %}
+
+
+  </div>

@@ -22,6 +22,12 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/assets/img");
 
+    eleventyConfig.addFilter(
+      "startsWith",
+      require("./src/filters/startsWith")
+    );
+
+
 
     /* HTML Minifiy */
     eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
