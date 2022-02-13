@@ -1,9 +1,9 @@
 ---
 title: Connect
 mainID: connect
-layout: page
 permalink: /connect/
 bodyClass: "connect-page"
+template: full-width
 eleventyNavigation:
   key: Connect
   order: 1000

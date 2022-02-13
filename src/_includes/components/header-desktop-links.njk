@@ -1,34 +1,26 @@
 <div class="items-center hidden md:flex">
-
     {% set navPages = collections.all | eleventyNavigation %}
-
     {% macro renderNavListItem(entry) %}
     {% set isHomepage = entry.url == '/' %}
     {% set isActive = page.url | startsWith(entry.url) %}
+        <li{% if entry.children.length %}{% if entry.url == page.url %} class="group active"{% else %} class="group"{% endif %}{% endif %}>
+            <a href="{{ entry.url | url }}"{% if isActive and not isHomepage %}class="active"{% endif %}>
+                {{ entry.title }}
+            </a>
 
-
-        <li class="{% if entry.children.length %}group{% endif %} {% if entry.url == page.url %}active{% endif %}">
-            <a  href="{{ entry.url | url }}"
-                class="{% if isActive and not isHomepage %}active{% endif %}">
-                {{ entry.title }}</a>
-            
-            <ul class="absolute hidden group-hover:block bg-white border border-neutral-200 z-50 font-medium border-b-0 border-t-0 shadow-md">
+            {% if entry.children.length %}    
+                <ul class="absolute hidden group-hover:block bg-white border border-gray-200 z-50 font-medium border-b-0 border-t-0 shadow-md">
                 {% for child in entry.children %}
                     {{ renderNavListItem(child) }}
                 {% endfor %}
-            </ul>
+                </ul>
+            {% endif %}
         </li>
-
     {% endmacro %}
-
     <ul class="main-navigation">
         {%- for entry in navPages %}
             {{ renderNavListItem(entry) }}
         {%- endfor -%}
     </ul>
-
-
-
-
 </div>
 

@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include "layouts/head.njk" %}
+    {% include "components/head-site-meta.njk" %}
+    {% include "components/head-title.njk" %}
+    {% include "components/head-page-meta.njk" %}
+    {% include "components/head-style.njk" %}
+    {% include "components/head-scripts.njk" %}
 </head>
-
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
-{% include "layouts/header.njk" %}
+{% include "components/header-top.njk" %}
+<header>
+    {% include "components/header.njk" %}
+</header>
 
 {% if hasMast %}
-    {% include "components/pageMast.njk" %}
+    {% include "components/section-masthead.njk" %}
 {% endif %}
 
-
 <main {% if mainID %} id="{{ mainID }}" {% else %} id="main" {% endif %} class="container mt-20">
-   {% block main  %}
-   {% endblock %}
+   {% include "components/template-selector.njk" %}
 </main>
 
 
-{% if hasSidebar %}
-    {% block sidebar %}{% endblock %}
-{% endif %}
-
-
-{% include "layouts/footer.njk" %}
+{% include "components/footer.njk" %}
+{% include "components/footer-copyright.njk" %}
+{% include "components/footer-scripts.njk" %}
 </body>
 </html>

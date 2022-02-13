@@ -1,0 +1,18 @@
+<nav x-data="{ open: false }" class="sticky top-0 bg-white border-b" role="navigation" aria-label="Main Menu">
+  <div class="container">
+    <div class="flex items-center justify-between h-28">
+
+      <div class="flex-shrink-0">
+        <a href="/">
+          {% include "components/logo.njk" %}
+        </a>
+      </div>
+      
+      {% include "components/header-desktop-links.njk" %}
+      {% include "components/header-mobile-button.njk" %}
+
+    </div>
+    
+  </div>
+  {% include "components/header-mobile-menu.njk" %}
+</nav>

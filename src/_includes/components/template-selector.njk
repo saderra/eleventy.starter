@@ -1,0 +1,7 @@
+    {% if template == "home" %} 
+        {% include "components/template-home.njk" %}
+    {% elseif template == "full-width" %}
+        {% include "components/template-full-width.njk" %}
+    {% else %}
+        {% include "components/template-column.njk" %}
+    {% endif %}

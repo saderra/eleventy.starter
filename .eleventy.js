@@ -27,6 +27,8 @@ module.exports = function (eleventyConfig) {
       require("./src/filters/startsWith")
     );
 
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
 
 
     /* HTML Minifiy */
