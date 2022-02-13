@@ -10,18 +10,29 @@ module.exports = {
   safelist: [],
   theme: {
     container: {
-			center: true,
-		},
+      center: true,
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "1140px",
+        xl: "1280px",
+        "2xl": "1440px"
+      }
+    },
     fontWeight: {
-			"extra-light": 200,
-			light: 300,
-			normal: 400,
-			medium: 500,
-			strong: 600
-		},
+      "extra-light": 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      strong: 600
+    },
     extend: {
+      colors: {
+        sdred:  '#D92231'
+      }
     },
   },
+
   variants: {
 		display: ['responsive', 'group-hover', 'group-focus'],
 	},

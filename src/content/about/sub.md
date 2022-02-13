@@ -1,7 +1,7 @@
 ---
 title: Sub Page
 description: "About Page Meta Description"
-permalink: "/about/sub"
+permalink: "/about/sub/"
 bodyClass: "about-page"
 layout: page
 mainID: "about"
@@ -10,4 +10,4 @@ eleventyNavigation:
   parent: About
 ---
 
-The about page. 
+This is the about sub page. 

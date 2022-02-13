@@ -1,8 +1,3 @@
-<!-- Main Navigation Styles -->
-{% set listyle = "" %}
-{% set linkShared = "text-lg text-gray-600 font-normal hover:text-gray-900" %}
-{% set linkStyle = "block py-5 px-3 ml-4" %}
-
 <div class="items-center hidden md:flex">
 
     {% set navPages = collections.all | eleventyNavigation %}
@@ -17,7 +12,7 @@
                 class="{% if isActive and not isHomepage %}active{% endif %}">
                 {{ entry.title }}</a>
             
-            <ul class="absolute hidden group-hover:block bg-white border border-gray-200 z-50 font-medium border-b-0 border-t-0 shadow-md">
+            <ul class="absolute hidden group-hover:block bg-white border border-neutral-200 z-50 font-medium border-b-0 border-t-0 shadow-md">
                 {% for child in entry.children %}
                     {{ renderNavListItem(child) }}
                 {% endfor %}

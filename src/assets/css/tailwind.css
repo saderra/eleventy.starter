@@ -18,7 +18,7 @@ body {
 
 /****** MAIN NAVIGATION ***/
 ul.main-navigation {
-  @apply inter font-medium uppercase;
+  @apply inter font-medium uppercase text-base;
 }
 
 ul.main-navigation {
@@ -30,7 +30,7 @@ ul.main-navigation > li {
 }
 
 ul.main-navigation > li > a {
-  @apply block p-3 ml-3;
+  @apply block p-3 ml-3 pb-4;
 }
 
 ul.main-navigation > li > ul {
