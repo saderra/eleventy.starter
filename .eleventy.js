@@ -15,7 +15,9 @@ module.exports = function (eleventyConfig) {
 
     /* PASSTHROUGHS */
     eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
-    eleventyConfig.addPassthroughCopy("./src/images");
+    eleventyConfig.addPassthroughCopy("./src/assets/images");
+    eleventyConfig.addPassthroughCopy("./src/assets/favicons");
+    eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
     eleventyConfig.addShortcode('version', function () {
         return now
     })
