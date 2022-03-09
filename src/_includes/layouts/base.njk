@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include "components/head-site-meta.njk" %}
-    {% include "components/head-title.njk" %}
-    {% include "components/head-page-meta.njk" %}
-    {% include "components/head-style.njk" %}
-    {% include "components/head-scripts.njk" %}
+    {% include "components/head/site-meta.njk" %}
+    {% include "components/head/title.njk" %}
+    {% include "components/head/page-meta.njk" %}
+    {% include "components/head/style.njk" %}
+    {% include "components/head/scripts.njk" %}
 </head>
 <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
-{% include "components/header-top.njk" %}
+{% include "components/header/top-bar.njk" %}
 <header>
     {% include "components/header.njk" %}
 </header>
@@ -23,7 +23,7 @@
 
 
 {% include "components/footer.njk" %}
-{% include "components/footer-copyright.njk" %}
-{% include "components/footer-scripts.njk" %}
+{% include "components/footer/copyright.njk" %}
+{% include "components/footer/scripts.njk" %}
 </body>
 </html>
