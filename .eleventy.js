@@ -4,8 +4,6 @@ const htmlmin = require('html-minifier')
 
 module.exports = function (eleventyConfig) { 
 
-
-
     /* Plugins */
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -14,7 +12,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/assets/css/tailwind.css')
 
     /* PASSTHROUGHS */
-    eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
     eleventyConfig.addPassthroughCopy("./src/assets/images");
     eleventyConfig.addPassthroughCopy("./src/assets/favicons");
     eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
